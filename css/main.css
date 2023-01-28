@@ -1,0 +1,160 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* comienzo de estilos generales */
+
+body{
+    background-color: white; /* fondo de todas las paginas*/
+    font-family: 'Montserrat', sans-serif; /* fuente general */
+}
+
+/* comienzo de estilos generales de header */
+
+header #arriba {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFDDEE;
+}
+
+header #arriba .logo {
+    display: flex; /* imagen y titulo en linea */
+    align-items: center; /* imagen y titulo centrado verticalmente*/
+    justify-content: left; /* imagen y titulo centrado horizontalmente*/
+}
+
+header #arriba .logo a{
+    text-decoration: none; /* saca decoracion de link */
+}
+
+header #arriba .logo a .logo__img-principal {
+    height: 80px; /* alto de imagen principal */
+    width: 80px; /* ancho de imagen principal */
+}
+
+header #arriba .logo a .logo__titulo {
+    font-family: 'Pacifico', cursive; /* fuente del titulo*/
+    font-size: 50px; /* tamaño del titulo */
+    color: #78BF45; /* color del titulo */
+}
+
+header #arriba .menu .menu__lista {
+    list-style: none; /* quita vinetas del menu */
+    text-transform: uppercase;/* menu en mayuscula */
+    font-size: 20px; /* tamaño de fuente del menu */
+    word-spacing: 20px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+header #arriba .menu .menu__lista li {
+    display: inline-block; /* menu en línea */
+}
+
+header #arriba .menu .menu__lista li a {
+    text-decoration: none; /* sin cambio de color en el link */
+    color: #005801; /* color letras del menu */
+}
+
+header .mensaje {
+    text-align: center;
+    color: #EC4E6F; /*color de letras de la cinta de mensaje */
+    font-size: 20px; /* tamaño de fuente de la cinta de mensaje */
+    text-align: center;
+}
+/*  fin de estilos generales de header */
+
+/* comienzo de estilos generales de footer */
+
+footer { 
+    background-color: rgb(180, 180, 180);
+    padding: 10px;
+}
+
+footer #abajo {
+    text-align: right;
+}
+footer div h3{
+    text-align: left;
+    font-size: 20px;
+}
+.abajo__logoIG {
+    height: 40px;
+    width: 40px;
+}
+.abajo__logoFB{
+    height: 45px;
+    width: 45px;
+}
+/* fin de estilos generales */
+
+/* estilos de home */
+
+/* estilos de main */
+
+main img{
+    width: 100%;
+    height: 100%;
+}
+.fondo-fucsia{
+    background-color: #EC4E6F;
+    text-align: center;
+    padding: 30px;
+}
+main div h2{
+    display: inline-block;
+}
+main div img{ 
+    width: 200px;
+}
+
+/* estilos de nosotros */
+
+.nosotros1{
+    display: inline-block;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    padding: 20px;
+}
+
+main div iframe{
+    text-align: center;
+}
+main div div{
+    display: inline-block;
+    margin-left: 20px;
+}
+/* estilos productos */
+
+main div div{
+    text-align: center;
+    display: inline-block;
+}
+
+/* estilos galeria */
+
+.imagen-galeria{
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+}
+
+/* estilos contactos */
+
+iframe,table{
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+
+main div form fieldset{
+    background-color: #EC4E6F;
+    padding: 50px;
+}
