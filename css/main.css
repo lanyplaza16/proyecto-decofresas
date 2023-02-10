@@ -7,154 +7,404 @@
 
 /* comienzo de estilos generales */
 
+/* comienzo de estilos generales de body */
 body{
     background-color: white; /* fondo de todas las paginas*/
     font-family: 'Montserrat', sans-serif; /* fuente general */
+    display: flex; /* propiedad flex */
+    flex-flow: column wrap; /* todas las cajas en columna */
 }
+/* fin de estilos generales de body */
 
 /* comienzo de estilos generales de header */
-
-header #arriba {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FFDDEE;
+/* mobile first */
+header {
+    width: 100%;
+    display: flex; /* propiedad flex */
+    flex-flow: column; /* cajas en columna */
+    position: fixed; /* fija menu */
+    top: 0; /* fija menu arriba */
 }
-
-header #arriba .logo {
-    display: flex; /* imagen y titulo en linea */
+header #top {
+    padding: 0.5rem;
+    background-color: #FFDDEE; /* fondo de header */
+    display: flex; /* propiedad flex */
+    justify-content: space-between; /* espacio entre el logo y el menu */
+    align-items: center; /* alineación vertical de logo y menu */
+}
+header #top .top__logo {
+    display: flex; /* propiedad flex */
     align-items: center; /* imagen y titulo centrado verticalmente*/
-    justify-content: left; /* imagen y titulo centrado horizontalmente*/
 }
-
-header #arriba .logo a{
+header #top .top__logo a{
     text-decoration: none; /* saca decoracion de link */
 }
-
-header #arriba .logo a .logo__img-principal {
-    height: 80px; /* alto de imagen principal */
-    width: 80px; /* ancho de imagen principal */
+header #top .top__logo a .logo__img-principal {
+    height: 2rem; /* alto de imagen principal */
+    width: 2rem; /* ancho de imagen principal */
 }
+header #top .top__logo a .logo__titulo {
+    font-family: 'Pacifico', cursive; /* fuente del titulo*/
+    font-size: 1rem; /* tamaño del titulo */
+    color: #78BF45; /* color del titulo */
+}
+header #top .top__menu .menu__lista {
+    display: flex; /* propiedad flex */
+    flex-flow: row wrap; /* en una fila y doble si es necesario */
+    gap: 0.2rem; /* espacio entre palabras */
+    list-style: none; /* quita vinetas del menu */
+    text-transform: uppercase;/* menu en mayuscula */
+    font-size: 0.5rem; /* tamaño de fuente del menu */
+}
+header #top .top__menu .menu__lista li a {
+    text-decoration: none; /* sin cambio de color en el link */
+    color: #005801; /* color letras del menu */
+}
+header .mensaje {
+    background-color: white; /* fondo de mensaje */
+    color: #005801; /*color de letras de la cinta de mensaje */
+    font-size: 0.5rem; /* tamaño de fuente de la cinta de mensaje */
+    text-align: center; /* alineacion del texto */
+    border-bottom: solid 2px #FFDDEE;
+} 
+/* mq para tablet */
+@media screen and (min-width:600px) {
+    header #top .top__logo a .logo__img-principal {
+        width: 3rem;
+        height: 3rem;
+    }
+    header #top .top__logo a .logo__titulo {
+        font-size: 2rem;
+    }
+    header #top .top__menu .menu__lista {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+    header .mensaje {
+        font-size: 1rem;
+    }
+}
+/* mq para laptop */
+@media screen and (min-width:1024px) {
+    header #top .top__logo a .logo__img-principal {
+        width: 4rem;
+        height: 4rem;
+    }
+    header #top .top__logo a .logo__titulo {
+        font-size: 3rem;
+    }
+    header #top .top__menu .menu__lista {
+        font-size: 1.2rem;
+        gap: 2rem;
+    }
+    header .mensaje {
+        font-size: 1.2rem;
+    }
+} 
+/*  fin de estilos generales de header */
 
-header #arriba .logo a .logo__titulo {
+/* comienzo de estilos generales de main */
+/*mobile first */
+main {
+    display: flex; /* propiedad flex */
+    flex-flow: column wrap; /* cajas en columnas y doble linea */
+    justify-content: center; /* cajas centradas arriba */
+    margin-top: 70px; /* inicio del main para que no lo tape el header */
+    width: 100%; /* ancho del main */
+}
+main #arriba {
+    font-size: small; /* tamaño de letra */
+    text-transform: uppercase; /* cambio a mayuscula */
+    color: rgb(180, 180, 180); /* color de letra */
+}
+/* mq para tablet */
+@media screen and (min-width:600px) {
+    main {
+        margin-top: 100px; /* inicio del main para que no lo tape el header */
+    }
+}
+/* mq para laptop */
+@media screen and (min-width:1024px) {
+    main {
+        margin-top: 140px; /* inicio del main para que no lo tape el header */
+    }
+} 
+/* fin de estilos generales de main */
+
+/* comienzo de estilos generales de footer */
+/* mobile firts */
+footer .whatsapp {
+    position: fixed; /* fija boton de ws */
+    bottom: 10%; /* fija botom de ws abajo */
+    right: 1%; /* fija botom de ws a la derecha */
+}
+footer .whatsapp a img {
+    width: 2rem; /*ancho boton de ws */
+    height: 2rem; /*alto boton de ws */
+}
+footer #abajo {
+    margin-top: 0,6rem;
+    background-color: rgb(211, 204, 204); /* fondo de footer */
+    display: flex; /* elementos alineados */
+    flex-flow: row wrap; /* mensaje y logos en una sola fila */
+    align-items: center; /* alineación vertical */
+    padding: 1rem; /* padding del footer */
+}
+footer #abajo .abajo__mensaje{
+    text-align: left; /* alienacion del mensaje del footer */
+    font-size: 0.8rem; /* tamaño del mensaje del footer */
+    margin-left: 0.2rem; /* margen del mensaje del footer */
+}
+footer #abajo .abajo__logoIG {
+    height: 3rem; /* alto del logo de ig */
+    width: 3rem; /* ancho del logo de ig */
+    padding: 0.2rem;
+    margin-left: 0.5rem; /* margin del logo de ig */
+}
+footer #abajo .abajo__logoFB{
+    height: 45px; /* alto del logo de fb */
+    width: 45px; /* ancho del logo de fb */
+    margin-left: 30px; /* margin del logo de fb */
+}
+footer .volver-arriba {
+    text-decoration: none; /* sacar el subrayado */
+    text-align: right; /* alineado a la derecha */
+}
+/* mq para tablet */
+@media screen and (min-width:600px) {
+    footer .whatsapp a img {
+        width: 3rem; /*ancho boton de ws */
+        height: 3rem; /*alto boton de ws */
+    }
+    footer #abajo .abajo__mensaje{
+        font-size: 1rem; /* tamaño del mensaje del footer */
+        margin-left: 1rem; /* margen del mensaje del footer */
+    }
+}
+/* mq para laptop */
+@media screen and (min-width:1024px) {
+    footer .whatsapp a img {
+        width: 4rem; /*ancho boton de ws */
+        height: 4rem; /*alto boton de ws */
+    }
+    .abajo__logoFB:hover {
+        width: 200px;
+        transform: scale(1.5);
+    }
+    .abajo__logoFB {
+        transition: all .3s;
+    }
+    .abajo__logoIG:hover {
+        width: 200px;
+        transform: scale(1.5);
+    }
+    .abajo__logoIG {
+        transition: all .3s;
+    }
+} 
+/* fin de estilos generales de footer */
+/* fin de estilos generales */
+
+/* comienzo de estilos de home*/
+main .home-seccion1 img{
+    width: 100%; /* ancho de imagen seccion 1 */
+}
+main .home-seccion2 {
+    display: flex; /* propiedad flex */
+    flex-flow: row wrap; /* texto e imagen en fila y doble fila si es necesario */
+    align-items: center; /* alineación vertical */
+    justify-content: center; /* alienación horizontal */
+    width: 100%; /* ancho de la seccion con respecto al tamaño de la pantalla */
+    height: 20%; /* alto de la seccion con respecto al tamaño de la pantalla */
+    background-color: #EC4E6F; /* fondo de footer */
+    padding: 10px; /* padding del footer */
+}
+main .home-seccion2 p {
+    font-size: larger; /* tamaño letra */
+}
+main .home-seccion2 img {
+    width: 10%; /* ancho de imagen */
+    height: 10%; /* alto de imagen */
+    padding: 0px 20px 10px 20px; /* pading de imagen */
+}
+/* fin de estilos de home*/
+
+/* comienzo de estilos de nosotros */
+main .nosotros-seccion1 {
+    width: 100%; /* ancho de la seccion */
+    padding: 50px; /* padding de la seccion*/
+    display: flex; /* propiedad flex predeterminado en fila */ 
+    justify-content: space-between; /* distribucion horizontal */
+    gap: 50px; /* espacio entre elementos */
+}
+main .nosotros-seccion1 .nosotros-seccion1__nosotros {
+    display: flex; /* propiedad flex */
+    flex-flow: column; /* caja en columnas */
+    justify-content: flex-start; /* alineado hacia arriba */
+    text-align: center; /* alineacion de texto centrada */
+}
+main .nosotros-seccion1 .nosotros-seccion1__nosotros h3 {
     font-family: 'Pacifico', cursive; /* fuente del titulo*/
     font-size: 50px; /* tamaño del titulo */
     color: #78BF45; /* color del titulo */
 }
-
-header #arriba .menu .menu__lista {
-    list-style: none; /* quita vinetas del menu */
-    text-transform: uppercase;/* menu en mayuscula */
-    font-size: 20px; /* tamaño de fuente del menu */
-    word-spacing: 20px;
-    text-align: right;
-    margin-right: 20px;
+main .nosotros-seccion2 {
+    background-color: #FFDDEE; /* color de fonde de la seccion */
+    width: 100%; /* ancho de la seccion */
+    padding: 20px; /* padding de la seccion */
+    display: flex; /* propiedad flex */
+    flex-direction: column; /* cajas en columnas */
+    justify-content: space-between; /* separacion entre cajas */
+    align-items: center; /* alineado horizontal */
 }
-
-header #arriba .menu .menu__lista li {
-    display: inline-block; /* menu en línea */
+main .nosotros-seccion2 h3 {
+    font-family: 'Pacifico', cursive; /* fuente del titulo*/
+    font-size: 50px; /* tamaño del titulo */
+    color: #78BF45; /* color del titulo */
+    margin-bottom: 10px; /* margen de abajo */
 }
-
-header #arriba .menu .menu__lista li a {
-    text-decoration: none; /* sin cambio de color en el link */
-    color: #005801; /* color letras del menu */
+main .nosotros-seccion2 .nosotros-seccion2__imgprov {
+    display: flex; /* prpiedad flex */
+    flex-flow: row wrap; /* cajas en filas y doble linea */
+    justify-content: space-around; /* espaciado horizontal */
+    align-items: center; /* alineacion vertical */
+    gap: 20px; /* separacion entre items */
 }
-
-header .mensaje {
-    text-align: center;
-    color: #EC4E6F; /*color de letras de la cinta de mensaje */
-    font-size: 20px; /* tamaño de fuente de la cinta de mensaje */
-    text-align: center;
+main .nosotros-seccion2 .nosotros-seccion2__imgprov .vacalin img {
+    height: 200px; /* alto de imagen */
 }
-/*  fin de estilos generales de header */
-
-/* comienzo de estilos generales de footer */
-
-footer { 
-    background-color: rgb(180, 180, 180);
-    padding: 10px;
+main .nosotros-seccion2 .nosotros-seccion2__imgprov .valentino img {
+    height: 200px; /* alto de imagen */
 }
-
-footer #abajo {
-    text-align: right;
+main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
+    height: 200px; /* alto de imagen */
 }
-footer div h3{
-    text-align: left;
-    font-size: 20px;
-}
-.abajo__logoIG {
-    height: 40px;
-    width: 40px;
-}
-.abajo__logoFB{
-    height: 45px;
-    width: 45px;
-}
-/* fin de estilos generales */
+/* fin de estilos de nosotros */
 
-/* estilos de home */
+/* comienzo de estilos de productos */
+main .productos-seccion1 {
+    width: 100%; /* ancho de la seccion */
+}
+main .productos-seccion1 h3 {
+    font-family: 'Pacifico', cursive; /* fuente del titulo*/
+    font-size: 50px; /* tamaño del titulo */
+    color: #78BF45; /* color del titulo */
+}
+main .productos-seccion1 .productos-seccion1__prod {
+    background-color:#FFDDEE; /* fondo de la seccion*/
+    padding: 20px; /* padding de la seccion */
+    display: flex; /* propiedad flex */
+    flex-direction: row; /* cajas en una fila */
+    justify-content: space-around; /* distribucion horizontal de cajas */
+    font-family: 'Pacifico', cursive; /* fuente del titulo*/
+    font-size: 30px; /* tamaño del titulo */
+    color: #005801; /* color del titulo */
+}
+main .productos-seccion1 .productos-seccion1__prod div {
+    display: flex; /* propiedad flex */
+    flex-direction: column; /* cajas en columnas */
+    align-items: center; /* alineado vertical */
+}
+main .productos-seccion1 .productos-seccion1__prod div img {
+    height: 300px; /* alto de las imagenes */
+}
+/* fin de estilos de productos */
 
-/* estilos de main */
-
-main img{
+/* comienzo de estilos de galeria responsive*/
+/*mobile first*/
+main .galeria {
+    background-color: #78bf4596; /* fondo de la caja*/
+    margin: 1rem;
+    height: 70vh;
+    display: grid; /* propiedad grid*/
+    gap: 1rem; /* separacion entre cajas */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 33%) /* declaracion de 3 filas */
+}
+main .galeria div img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
-.fondo-fucsia{
-    background-color: #EC4E6F;
-    text-align: center;
-    padding: 30px;
-}
-main div h2{
-    display: inline-block;
-}
-main div img{ 
-    width: 200px;
+.galeria__img-dos, .galeria__img-cinco {
+    display: none;
 }
 
-/* estilos de nosotros */
-
-.nosotros1{
-    display: inline-block;
-    text-align: center;
+main .galeria-seccion1 .galeria-seccion1__galeria .galeria__titulo {
+    grid-column: span 3; /* combia columnas toma 3 espacios */
+    margin-top: 10px; /* margin entre productos */
+    font-family: 'Pacifico', cursive; /* fuente del titulo */
+    font-size: 30px; /* tamaño del titulo */
+    color: #005801; /* color del titulo */ 
 }
-
-h2{
-    text-align: center;
-    padding: 20px;
+main .galeria-seccion1 .galeria-seccion1__galeria .galeria__imagen img {
+    width: 100%; /*imagen que ocupe el 100% del div */
+    height: 100%;
+    object-fit: cover; /* tamaño de imagen dentro del contenedor */
 }
+/* fin de estilos de galeria */
 
-main div iframe{
-    text-align: center;
+/* comienzo de estilos de contacto */
+main .contacto-seccion1 {
+    width: 100%; /* ancho de la seccion */
 }
-main div div{
-    display: inline-block;
-    margin-left: 20px;
+main .contacto-seccion1 h3 {
+    font-family: 'Pacifico', cursive; /* fuente del titulo*/
+    font-size: 50px; /* tamaño del titulo */
+    color: #78BF45; /* color del titulo */
+    margin-bottom: 10px; /* margen inferior */
+    text-align: center; /* alineacion de texto */
 }
-/* estilos productos */
-
-main div div{
-    text-align: center;
-    display: inline-block;
+main .contacto-seccion1 .contacto-seccion1__ubicacion {
+    display: flex; /* propiedad flex */
+    flex-direction: column; /* cajas en columnas */
+    justify-content: space-around; /* distribucion vertical entre cajas */
+    gap: 10px; /* espaciado entre cajas */
+    background-color: #78bf4596; /* fondo de la caja */
+    padding: 20px; /* margen interno de la caja*/
 }
-
-/* estilos galeria */
-
-.imagen-galeria{
-    width: 500px;
-    height: 500px;
-    padding: 20px;
+main .contacto-seccion1 .contacto-seccion1__ubicacion h4 {
+    font-family: 'Pacifico', cursive; /* fuente del titulo*/
+    font-size: 30px; /* tamaño del titulo */
+    color: #005801; /* color del titulo */
+    margin-bottom: 10px; /* margen inferior */
 }
-
-/* estilos contactos */
-
-iframe,table{
-    display: inline-block;
-    padding-bottom: 20px;
+main .contacto-seccion1 .contacto-seccion1__ubicacion div {
+    display: flex; /* propiedad flex */
+    flex-direction: row; /* cajas en fila */
+    justify-content: space-around; /* distribucion forizontal */
+    align-items: center; /* alineación vertical */
 }
-
-
-main div form fieldset{
-    background-color: #EC4E6F;
-    padding: 50px;
+main .contacto-seccion1 .contacto-seccion1__ubicacion div div {
+    display: flex; /* propiedad flex */
+    flex-direction: column; /* cajas en columnas */
+    align-items: center; /* alineacion horizontal */
+    gap: 10px; /* espacio entre elementos */
 }
+main .contacto-seccion1 .contacto-seccion1__ubicacion div table {
+    text-align: left; /* alineacion de la tabla */
+}
+main .contacto-seccion1 .contacto-seccion1__ubicacion div a {
+    text-decoration: none; /* sacar decoracion del link */
+    font-size: 30px; /* tamaño de letra */
+    background-color: #005801; /* fondo de botom */
+    padding: 10px; /* margen interior */
+    color: white; /* color de letra */
+    box-shadow: 0 0 15px black; /* sombra */
+}
+main .contacto-seccion2 {
+    width: 100%; /* ancho de la seccion */
+    display: flex; /* propiedad flex */
+    flex-direction: column; /* cajas en columnas */
+    justify-content: space-around; /* distribucion vertical entre cajas */
+    gap: 20px; /* espaciado entre cajas */
+    background-color: white; /* fondo de la caja */
+    padding: 20px; /* margen interno de la caja*/
+}
+main .contacto-seccion2 h4 {
+    font-family: 'Pacifico', cursive; /* fuente del titulo*/
+    font-size: 30px; /* tamaño del titulo */
+    color: #005801; /* color del titulo */
+    margin-bottom: 10px; /* margen inferior */
+}
+/* fin de estilos de contacto */

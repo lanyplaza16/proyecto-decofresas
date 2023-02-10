@@ -13,12 +13,12 @@
 <body>
     <!-- banner principal -->
     <header>
-        <div id="arriba">
-            <div class="logo">
+        <div id="top">
+            <div class="top__logo">
                 <a href="../index.html"><img class="logo__img-principal" src="../img/fresa-header.png" alt="imagen de logo de decofresas"></a>
                 <a href="../index.html"><h1 class="logo__titulo">Decofresas</h1></a>
             </div>
-            <nav class="menu"> 
+            <nav class="top__menu"> 
                 <ul class="menu__lista">
                     <li>
                         <a href="../pages/nosotros.html">Nosotros</a>
@@ -39,96 +39,111 @@
             <p>Hacemos únicos tus momentos especiales</p>
         </div>
     </header>
-       <!-- contenido principal -->
+    <!-- contenido principal -->
     <main>
-        <h1>Contacto</h1>
-        <div>
-            <h2>Comunícate con nosotros</h2>
-        </div>
-        <div>
-            <h2>Ubicación</h2>
-            <p>Microcentro, CABA.</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.54133420984!2d-58.3739421!3d-34.6007392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3613f716c54df68!2sDecofresas!5e0!3m2!1ses-419!2sar!4v1674004798218!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <table>
-                <tr>
-                    <th>Horatio:</th>
-                </tr>
-                <tr>
-                    <td>Lunes</td>
-                    <td>09:00 - 17:00</td>
-                </tr>
-                <tr>
-                    <td>Martes
-                    </td>
-                    <td>09:00 - 17:00</td>
-                </tr>
-                <tr>
-                    <td>Miércoles</td>
-                    <td>09:00 - 17:00</td>
-                </tr>
-                <tr>
-                    <td>Jueves</td>
-                    <td>09:00 - 17:00</td>
-                </tr>
-                <tr>
-                    <td>Viernes</td>
-                    <td>09:00 - 17:00</td>
-                </tr>
-                <tr>
-                    <td>Sábado</td>
-                    <td>Cerrado</td>
-                </tr>
-                <tr>
-                    <td>Sábado</td>
-                    <td>Cerrado</td>
-                </tr>
-            </table>
-        </div>
-        <div class="fondo-fucsia">
-            <h2>Trabaja con nosotros</h2>
-            <h3>ÚNETE A NUESTRO EQUIPO</h3>
-            <p>Si te interesa formar parte de nuestro equipo, empieza por postularte aquí y adjunta tu CV.</p>
-            <form>
-                <fieldset class="formulario">
-                    <legend>Completa tus datos</legend>
+        <h2 id="arriba">
+            home > contacto
+        </h2>
+        <section class="contacto-seccion1">
+            <h3>
+                Contacto
+            </h3>
+            <div class="contacto-seccion1__ubicacion">
+                <h4>
+                    Ubicación
+                </h4>
+                <div>
                     <div>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" placeholder="Nombre completo">
+                        <p>Microcentro, CABA.</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.54133420984!2d-58.3739421!3d-34.6007392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3613f716c54df68!2sDecofresas!5e0!3m2!1ses-419!2sar!4v1674004798218!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
                     </div>
-                    <div>
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" name="email" placeholder="email@gmail.com">
-                    </div>
-                    <div>
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea name="mensaje" placeholder="Mensaje"></textarea>
-                    </div>
-                    <div>
-                        <label for="adjunto_cv">Adjuntar CV:</label>
-                        <input type="file" name="adjunto_cv">
-                    </div>
-                    <div>
-                        <input type="submit">
-                        <input type="reset">
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-        
-
+                    <table>
+                        <tr>
+                            <th>Horario:</th>
+                        </tr>
+                        <tr>
+                            <td>Lunes</td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Martes
+                            </td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Miércoles</td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Jueves</td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Viernes</td>
+                            <td>09:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>Cerrado</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>Cerrado</td>
+                        </tr>
+                    </table>
+                    <a href="https://wa.me/5491130516222" target="_blank">
+                        <h5>Comunicate con nosotros</h5>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="contacto-seccion2">
+            <h4>
+                Trabajá con nosotros
+            </h4>
+            <p>Si te interesa formar parte de nuestro equipo, empezá por postularte aquí y adjunta tu CV.</p>
+            <div>  
+                <form>
+                    <fieldset class="formulario">
+                        <legend>Completa tus datos</legend>
+                        <div>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" placeholder="Nombre completo">
+                        </div>
+                        <div>
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" name="email" placeholder="email@gmail.com">
+                        </div>
+                        <div>
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea name="mensaje" placeholder="Mensaje"></textarea>
+                        </div>
+                        <div>
+                            <label for="adjunto_cv">Adjuntar CV:</label>
+                            <input type="file" name="adjunto_cv">
+                        </div>
+                        <div>
+                            <input type="submit">
+                            <input type="reset">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
     </main>
-    <!-- pie de pagina -->
-    <footer>
-        <div>
-          <h3>© 2023 DecoFresas, todos los derechos reservados.</h3>  
+       <!-- pie de pagina -->
+       <footer>
+        <div class="whatsapp">
+            <a href="https://wa.me/5491130516222" target="_blank"><img src="../img/wp-logo.png" alt="logo de whatsapp"></a>
         </div>
-        <div>
-            <a href="https://www.instagram.com/decofresas.arg/" target="_blank"><img class="logo-ig" src="../img/instagram-logo.png" alt="imagen de logo instagram"></a>
-            <a href="https://www.facebook.com/Decofresas.arg/" target="_blank"><img class= "logo-fb" src="../img/facebook-logo.png" alt="imagen de logo facebook"></a>   
+        <div id="abajo">
+          <h3 class="abajo__mensaje">© 2023 DecoFresas, todos los derechos reservados.</h3>
+          <a href="https://www.instagram.com/decofresas.arg/" target="_blank"><img class="abajo__logoIG" src="../img/instagram-logo.png" alt="imagen de logo instagram"></a>
+          <a href="https://www.facebook.com/Decofresas.arg/" target="_blank"><img class= "abajo__logoFB" src="../img/facebook-logo.png" alt="imagen de logo facebook"></a> 
         </div>
-        <div>
+        <div class="volver-arriba">
             <a href="#arriba">volver arriba</a>
         </div>
-    </footer> 
+    </footer>
 </body>
 </html>

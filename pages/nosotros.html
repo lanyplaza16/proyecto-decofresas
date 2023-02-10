@@ -13,12 +13,12 @@
 <body>
     <!-- banner principal -->
     <header>
-        <div id="arriba">
-            <div class="logo">
+        <div id="top">
+            <div class="top__logo">
                 <a href="../index.html"><img class="logo__img-principal" src="../img/fresa-header.png" alt="imagen de logo de decofresas"></a>
                 <a href="../index.html"><h1 class="logo__titulo">Decofresas</h1></a>
             </div>
-            <nav class="menu"> 
+            <nav class="top__menu"> 
                 <ul class="menu__lista">
                     <li>
                         <a href="../pages/nosotros.html">Nosotros</a>
@@ -39,42 +39,52 @@
             <p>Hacemos únicos tus momentos especiales</p>
         </div>
     </header>
-       <!-- contenido principal -->
+    <!-- contenido principal -->
     <main>
-        <h1>Nosotros</h1>
-        <span class="nosotros1">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, impedit a! Suscipit iste, voluptatem quas earum repellat eum, consequuntur fugit laboriosam dolorem molestias nisi ratione eveniet et. Unde, aliquid sint.</p>
-                <img src="../img/img-nosotros.jpg" alt="imagen nosotros">
-        </span>
-        <h2>Entrevista Emprendedores</h2>
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ok1pQmFmYFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <h2>Nuestros proveedores</h2>
-        <div>
-            <div>
-                <a href="https://www.vacalin.com/"><img src="../img/vacalin-logo.png" alt="logo vacalin"></a></li>
+        <h2 id="arriba">
+            home > nosotros
+        </h2>
+        <section class="nosotros-seccion1">
+            <div class="nosotros-seccion1__nosotros">
+                <h3>
+                    Nosotros
+                </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis in eius, iste amet esse perspiciatis molestias similique magnam quia ab laudantium aperiam velit, ex qui optio doloremque sequi odio corporis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo odit exercitationem velit est aspernatur rem beatae voluptatum voluptatibus quod cum dolorum blanditiis assumenda, repudiandae aliquam. Quos veritatis hic at eligendi?</p>
             </div>
-            <div>
-                <a href="https://www.cocinaconvalentino.com.ar/"><img src="../img/valentino-logo.jpg" alt="logo valentino"></a></li>
+            <div class="nosotros-seccion1__video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ok1pQmFmYFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div>
-                <a href="http://www.mercadocentral.gob.ar/"><img src="../img/mercadocentral-logo.png" alt="logo mercado central"></a>
+        </section>
+        <section class="nosotros-seccion2">
+            <h3>
+                Nuestros provedores
+            </h3>
+            <div class="nosotros-seccion2__imgprov">
+                <div class="vacalin">
+                    <a href="https://www.vacalin.com/" target="_blank"><img src="../img/vacalin-logo.png" alt="logo vacalin"></a></li>
+                </div>
+                <div class="valentino">
+                    <a href="https://www.cocinaconvalentino.com.ar/" target="_blank"><img src="../img/valentino-logo.jpg" alt="logo valentino"></a></li>
+                </div>
+                <div class="mercado">
+                    <a href="http://www.mercadocentral.gob.ar/" target="_blank"><img src="../img/mercadocentral-logo.png" alt="logo mercado central"></a>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
-    <!-- pie de pagina -->
+       <!-- pie de pagina -->
     <footer>
-        <div>
-          <h3>© 2023 DecoFresas, todos los derechos reservados.</h3>  
+        <div class="whatsapp">
+            <a href="https://wa.me/5491130516222" target="_blank"><img src="../img/wp-logo.png" alt="logo de whatsapp"></a>
         </div>
-        <div>
-            <a href="https://www.instagram.com/decofresas.arg/" target="_blank"><img class="logo-ig" src="../img/instagram-logo.png" alt="imagen de logo instagram"></a>
-            <a href="https://www.facebook.com/Decofresas.arg/" target="_blank"><img class= "logo-fb" src="../img/facebook-logo.png" alt="imagen de logo facebook"></a>   
+        <div id="abajo">
+          <h3 class="abajo__mensaje">© 2023 DecoFresas, todos los derechos reservados.</h3>
+          <a href="https://www.instagram.com/decofresas.arg/" target="_blank"><img class="abajo__logoIG" src="../img/instagram-logo.png" alt="imagen de logo instagram"></a>
+          <a href="https://www.facebook.com/Decofresas.arg/" target="_blank"><img class= "abajo__logoFB" src="../img/facebook-logo.png" alt="imagen de logo facebook"></a> 
         </div>
-        <div>
+        <div class="volver-arriba">
             <a href="#arriba">volver arriba</a>
         </div>
-    </footer> 
+    </footer>
 </body>
 </html>

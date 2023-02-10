@@ -13,12 +13,12 @@
 <body>
     <!-- banner principal -->
     <header>
-        <div id="arriba">
-            <div class="logo">
+        <div id="top">
+            <div class="top__logo">
                 <a href="../index.html"><img class="logo__img-principal" src="../img/fresa-header.png" alt="imagen de logo de decofresas"></a>
                 <a href="../index.html"><h1 class="logo__titulo">Decofresas</h1></a>
             </div>
-            <nav class="menu"> 
+            <nav class="top__menu"> 
                 <ul class="menu__lista">
                     <li>
                         <a href="../pages/nosotros.html">Nosotros</a>
@@ -39,37 +39,42 @@
             <p>Hacemos únicos tus momentos especiales</p>
         </div>
     </header>
-       <!-- contenido principal -->
+    <!-- contenido principal -->
     <main>
-        <h1>Galeria</h1>
-        <div>
-          <h3>Classic Boxes</h3>
-          <img class= "imagen-galeria" src="../img/classic1.jpg" alt="imaen classic boxes 1">
-          <img class= "imagen-galeria" src="../img/classic2.jpg" alt="imaen classic boxes 2">
-        </div>
-        <div>
-            <h3>Deluxe Boxes</h3>
-            <img class= "imagen-galeria" src="../img/deluxe1.jpg" alt="imaen classic boxes 1">
-            <img class= "imagen-galeria" src="../img/deluxe2.jpg" alt="imaen classic boxes 2">
-          </div>
-          <div>
-            <h3>Custom Boxes</h3>
-            <img class= "imagen-galeria" src="../img/custom1.jpg" alt="imaen classic boxes 1">
-            <img class= "imagen-galeria" src="../img/custom2.jpg" alt="imaen classic boxes 2">
-          </div>
+        <h2 id="arriba">
+            home > galeria
+        </h2>
+        <section class="galeria">
+            <div class="galeria__img-uno">
+                <img src="../img/galeria-classic1.jpg" alt="Imagen classic uno">
+            </div>
+            <div class="galeria__img-dos">
+                <img src="../img/galeria-classic2.jpg" alt="imagen classic dos">
+            </div>
+            <div class="galeria__img-tres">
+                <img src="../img/galeria-classic3.jpg" alt="imagen classic tres">
+            </div>
+            <div class="galeria__img-cuatro">
+                <img src="../img/galeria-classic4.jpg" alt="imagen classic cuatro">
+            </div>
+            <div class="galeria__img-cinco">
+                <img src="../img/galeria-classic5.jpg" alt="imagen classic cinco">
+            </div>
+        </section>
     </main>
-    <!-- pie de pagina -->
-    <footer>
-        <div>
-          <h3>© 2023 DecoFresas, todos los derechos reservados.</h3>  
+       <!-- pie de pagina -->
+       <footer>
+        <div class="whatsapp">
+            <a href="https://wa.me/5491130516222" target="_blank"><img src="../img/wp-logo.png" alt="logo de whatsapp"></a>
         </div>
-        <div>
-            <a href="https://www.instagram.com/decofresas.arg/" target="_blank"><img class="logo-ig" src="../img/instagram-logo.png" alt="imagen de logo instagram"></a>
-            <a href="https://www.facebook.com/Decofresas.arg/" target="_blank"><img class= "logo-fb" src="../img/facebook-logo.png" alt="imagen de logo facebook"></a>   
+        <div id="abajo">
+          <h3 class="abajo__mensaje">© 2023 DecoFresas, todos los derechos reservados.</h3>
+          <a href="https://www.instagram.com/decofresas.arg/" target="_blank"><img class="abajo__logoIG" src="../img/instagram-logo.png" alt="imagen de logo instagram"></a>
+          <a href="https://www.facebook.com/Decofresas.arg/" target="_blank"><img class= "abajo__logoFB" src="../img/facebook-logo.png" alt="imagen de logo facebook"></a> 
         </div>
-        <div>
+        <div class="volver-arriba">
             <a href="#arriba">volver arriba</a>
         </div>
-    </footer> 
+    </footer>
 </body>
 </html>
