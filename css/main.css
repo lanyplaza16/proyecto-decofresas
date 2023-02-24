@@ -8,8 +8,9 @@
 /* comienzo de estilos generales */
 
 /* comienzo de estilos generales de body */
-body{
-    background-color: white; /* fondo de todas las paginas*/
+/*mobile first */
+body {
+    background-image: linear-gradient(to top, rgb(230, 221, 221), white); /* fondo de todas las paginas gradiente lineal*/
     font-family: 'Montserrat', sans-serif; /* fuente general */
     display: flex; /* propiedad flex */
     flex-flow: column wrap; /* todas las cajas en columna */
@@ -54,19 +55,33 @@ header #top .top__menu .menu__lista {
     gap: 0.2rem; /* espacio entre palabras */
     list-style: none; /* quita vinetas del menu */
     text-transform: uppercase;/* menu en mayuscula */
-    font-size: 0.5rem; /* tamaño de fuente del menu */
+    font-size: 16px; /* tamaño de fuente del menu */
 }
 header #top .top__menu .menu__lista li a {
     text-decoration: none; /* sin cambio de color en el link */
     color: #005801; /* color letras del menu */
 }
-header .mensaje {
+header .mensaje-container {
+    overflow: hidden; /* oculta los elementos que se salen del contenedor */
+    width: 100%; /* ancho del contenedor */
     background-color: white; /* fondo de mensaje */
+    border-bottom: solid 2px #FFDDEE; /* linea de borde del mensaje */
+}
+header .mensaje {
     color: #005801; /*color de letras de la cinta de mensaje */
-    font-size: 0.5rem; /* tamaño de fuente de la cinta de mensaje */
-    text-align: center; /* alineacion del texto */
-    border-bottom: solid 2px #FFDDEE;
-} 
+    font-size: 16px; /* tamaño de fuente de la cinta de mensaje */
+    text-align: right; /* alineacion del texto */
+    white-space: nowrap;
+    animation: cinta-mensaje 8s linear infinite; /* animación de 15 segundos, lineal y un número infinito de repeticiones */
+}
+   @keyframes cinta-mensaje {
+    0% {
+      transform: translateX(0%); /* posición inicial del mensaje, fuera de la pantalla */
+    }
+    100% {
+      transform: translateX(-100%); /* posición final del mensaje, fuera de la pantalla */
+    }
+}
 /* mq para tablet */
 @media screen and (min-width:600px) {
     header #top .top__logo a .logo__img-principal {
@@ -74,14 +89,14 @@ header .mensaje {
         height: 3rem;
     }
     header #top .top__logo a .logo__titulo {
-        font-size: 2rem;
+        font-size: 32px;
     }
     header #top .top__menu .menu__lista {
-        font-size: 1rem;
+        font-size: 32px;
         gap: 1rem;
     }
     header .mensaje {
-        font-size: 1rem;
+        animation: cinta-mensaje 15s linear infinite; /* animación de 20 segundos, lineal y un número infinito de repeticiones */
     }
 }
 /* mq para laptop */
@@ -89,16 +104,35 @@ header .mensaje {
     header #top .top__logo a .logo__img-principal {
         width: 4rem;
         height: 4rem;
+        transition: .3s;
+    }
+    header #top .top__logo a .logo__img-principal:hover {
+        width: 4rem;
+        height: 4rem;
+        transform: rotate(30deg);
+        transition: .3s;
     }
     header #top .top__logo a .logo__titulo {
-        font-size: 3rem;
+        font-size: 32px;
+        transition: .3s;
+    }
+    header #top .top__logo a .logo__titulo:hover {
+        transform: scale(1.1);
+        transition: .3s;
     }
     header #top .top__menu .menu__lista {
-        font-size: 1.2rem;
+        font-size: 16px;
         gap: 2rem;
     }
+    header #top .top__menu .menu__lista li {
+        transition: .3s;
+    }
+    header #top .top__menu .menu__lista li:hover {
+        transform: scale(1.2);
+        transition: .3s;
+    }
     header .mensaje {
-        font-size: 1.2rem;
+        animation: cinta-mensaje 20s linear infinite; /* animación de 20 segundos, lineal y un número infinito de repeticiones */
     }
 } 
 /*  fin de estilos generales de header */
@@ -109,24 +143,24 @@ main {
     display: flex; /* propiedad flex */
     flex-flow: column wrap; /* cajas en columnas y doble linea */
     justify-content: center; /* cajas centradas arriba */
-    margin-top: 70px; /* inicio del main para que no lo tape el header */
+    margin-top: 100px; /* inicio del main para que no lo tape el header */
     width: 100%; /* ancho del main */
 }
 main #arriba {
-    font-size: small; /* tamaño de letra */
+    font-size: 16px; /* tamaño de letra */
     text-transform: uppercase; /* cambio a mayuscula */
     color: rgb(180, 180, 180); /* color de letra */
 }
 /* mq para tablet */
 @media screen and (min-width:600px) {
     main {
-        margin-top: 100px; /* inicio del main para que no lo tape el header */
+        margin-top: 130px; /* inicio del main para que no lo tape el header */
     }
 }
 /* mq para laptop */
 @media screen and (min-width:1024px) {
     main {
-        margin-top: 140px; /* inicio del main para que no lo tape el header */
+        margin-top: 110px; /* inicio del main para que no lo tape el header */
     }
 } 
 /* fin de estilos generales de main */
@@ -135,16 +169,16 @@ main #arriba {
 /* mobile firts */
 footer .whatsapp {
     position: fixed; /* fija boton de ws */
-    bottom: 10%; /* fija botom de ws abajo */
-    right: 1%; /* fija botom de ws a la derecha */
-}
-footer .whatsapp a img {
-    width: 2rem; /*ancho boton de ws */
-    height: 2rem; /*alto boton de ws */
-}
+     bottom: 5%; /* fija botom de ws abajo */
+     right: 1%; /* fija botom de ws a la derecha */
+ }
+ footer .whatsapp a img {
+     width: 2rem; /*ancho boton de ws */
+     height: 2rem; /*alto boton de ws */
+ }
 footer #abajo {
     margin-top: 0,6rem;
-    background-color: rgb(211, 204, 204); /* fondo de footer */
+    background-color: rgba(211, 204, 204, 0); /* fondo de footer */
     display: flex; /* elementos alineados */
     flex-flow: row wrap; /* mensaje y logos en una sola fila */
     align-items: center; /* alineación vertical */
@@ -206,78 +240,162 @@ footer .volver-arriba {
 /* fin de estilos generales */
 
 /* comienzo de estilos de home*/
+/* mobile firts*/
 main .home-seccion1 img{
     width: 100%; /* ancho de imagen seccion 1 */
+    height: 40vh;
 }
 main .home-seccion2 {
     display: flex; /* propiedad flex */
-    flex-flow: row wrap; /* texto e imagen en fila y doble fila si es necesario */
+    white-space: nowrap;
     align-items: center; /* alineación vertical */
     justify-content: center; /* alienación horizontal */
+    gap: 5px;
     width: 100%; /* ancho de la seccion con respecto al tamaño de la pantalla */
-    height: 20%; /* alto de la seccion con respecto al tamaño de la pantalla */
+    height: 20vh; /* alto de la seccion con respecto al tamaño de la pantalla */
     background-color: #EC4E6F; /* fondo de footer */
-    padding: 10px; /* padding del footer */
+    padding: 5px; /* padding del footer */
 }
 main .home-seccion2 p {
-    font-size: larger; /* tamaño letra */
+    font-size: 16px; /* tamaño letra */
 }
 main .home-seccion2 img {
-    width: 10%; /* ancho de imagen */
-    height: 10%; /* alto de imagen */
-    padding: 0px 20px 10px 20px; /* pading de imagen */
+    width: 15%; /* ancho de imagen */
+    height: 30%; /* alto de imagen */
+}
+/* mq para tablet */
+@media screen and (min-width:600px) {
+    main .home-seccion1 img{
+        height: 70vh;
+    }
+    main .home-seccion2 img {
+        width: 15%; /* ancho de imagen */
+        height: 80%; /* alto de imagen */
+    }
+}
+/* mq para laptop */
+@media screen and (min-width:1024px) {
+    main .home-seccion1 img{
+        height: 80vh;
+    }
+    main .home-seccion2 img {
+        width: 15%; /* ancho de imagen */
+        height: 100%; /* alto de imagen */
+    }
 }
 /* fin de estilos de home*/
 
 /* comienzo de estilos de nosotros */
+/* mobile firts*/
 main .nosotros-seccion1 {
     width: 100%; /* ancho de la seccion */
-    padding: 50px; /* padding de la seccion*/
-    display: flex; /* propiedad flex predeterminado en fila */ 
-    justify-content: space-between; /* distribucion horizontal */
-    gap: 50px; /* espacio entre elementos */
+    padding: 5px; /* padding de la seccion*/
+    display: flex; /* propiedad flex predeterminado en fila */
+    flex-direction: column; 
+    justify-content: center;
+    gap: 20px; /* espacio entre elementos */
+    
 }
 main .nosotros-seccion1 .nosotros-seccion1__nosotros {
+    width: 100%;
     display: flex; /* propiedad flex */
-    flex-flow: column; /* caja en columnas */
-    justify-content: flex-start; /* alineado hacia arriba */
+    justify-content: center;
+    flex-direction: column;
     text-align: center; /* alineacion de texto centrada */
 }
 main .nosotros-seccion1 .nosotros-seccion1__nosotros h3 {
     font-family: 'Pacifico', cursive; /* fuente del titulo*/
-    font-size: 50px; /* tamaño del titulo */
+    font-size: 32px; /* tamaño del titulo */
     color: #78BF45; /* color del titulo */
+    margin-bottom: 10px;
+}
+main .nosotros-seccion1 .nosotros-seccion1__nosotros p {
+    font-size: 16px;
 }
 main .nosotros-seccion2 {
     background-color: #FFDDEE; /* color de fonde de la seccion */
-    width: 100%; /* ancho de la seccion */
-    padding: 20px; /* padding de la seccion */
+    width: 100%;
     display: flex; /* propiedad flex */
-    flex-direction: column; /* cajas en columnas */
-    justify-content: space-between; /* separacion entre cajas */
-    align-items: center; /* alineado horizontal */
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; /* alineacion de texto centrada */
 }
 main .nosotros-seccion2 h3 {
     font-family: 'Pacifico', cursive; /* fuente del titulo*/
-    font-size: 50px; /* tamaño del titulo */
+    font-size: 32px; /* tamaño del titulo */
     color: #78BF45; /* color del titulo */
-    margin-bottom: 10px; /* margen de abajo */
+    margin-bottom: 10px;
 }
 main .nosotros-seccion2 .nosotros-seccion2__imgprov {
     display: flex; /* prpiedad flex */
-    flex-flow: row wrap; /* cajas en filas y doble linea */
-    justify-content: space-around; /* espaciado horizontal */
+    flex-direction: column;
+    justify-content: center;
     align-items: center; /* alineacion vertical */
     gap: 20px; /* separacion entre items */
 }
 main .nosotros-seccion2 .nosotros-seccion2__imgprov .vacalin img {
-    height: 200px; /* alto de imagen */
+    width: 50%;
+    height: 80%;
 }
 main .nosotros-seccion2 .nosotros-seccion2__imgprov .valentino img {
-    height: 200px; /* alto de imagen */
+    width: 50%;
+    height: 80%; 
 }
 main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
-    height: 200px; /* alto de imagen */
+    width: 50%;
+    height: 80%;
+}
+/* mq para tablet */
+@media screen and (min-width:600px) {
+    main .nosotros-seccion1 {
+        padding: 40px; /* padding de la seccion*/
+        flex-direction: row;
+        justify-content: space-between; /* distribucion horizontal */
+    }
+    main .nosotros-seccion2 .nosotros-seccion2__imgprov {
+        flex-direction: row;
+        padding: 10px;
+    }
+    main .nosotros-seccion2 .nosotros-seccion2__imgprov .vacalin img {
+        width: 150px;
+        height: 100px;
+    }
+    main .nosotros-seccion2 .nosotros-seccion2__imgprov .valentino img {
+        width: 150px;
+        height: 100px;
+    }
+    main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
+        width: 200px;
+        height: 100px;
+    }
+}
+/* mq para laptop */
+@media screen and (min-width:1024px) {
+    main .nosotros-seccion1 {
+        padding: 50px; /* padding de la seccion*/ 
+    }
+    main .nosotros-seccion1 .nosotros-seccion1__nosotros h3 {
+        font-size: 50px; /* tamaño del titulo */
+    }
+    main .nosotros-seccion2 h3 {
+        font-size: 50px; /* tamaño del titulo */
+    }
+    main .nosotros-seccion2 .nosotros-seccion2__imgprov {
+        flex-direction: row;
+        padding: 10px;
+    }
+    main .nosotros-seccion2 .nosotros-seccion2__imgprov .vacalin img {
+        width: 200px;
+        height: 200px;
+    }
+    main .nosotros-seccion2 .nosotros-seccion2__imgprov .valentino img {
+        width: 200px;
+        height: 200px; 
+    }
+    main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
+        width: 300px;
+        height: 200px;
+    }
 }
 /* fin de estilos de nosotros */
 
