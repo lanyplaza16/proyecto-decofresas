@@ -329,9 +329,9 @@ main .nosotros-seccion2 h3 {
 main .nosotros-seccion2 .nosotros-seccion2__imgprov {
     display: flex; /* prpiedad flex */
     flex-direction: column;
-    justify-content: center;
     align-items: center; /* alineacion vertical */
-    gap: 20px; /* separacion entre items */
+    gap: 20px;
+    padding: 10px;
 }
 main .nosotros-seccion2 .nosotros-seccion2__imgprov .vacalin img {
     width: 50%;
@@ -354,7 +354,7 @@ main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
     }
     main .nosotros-seccion2 .nosotros-seccion2__imgprov {
         flex-direction: row;
-        padding: 10px;
+        justify-content: space-around;
     }
     main .nosotros-seccion2 .nosotros-seccion2__imgprov .vacalin img {
         width: 150px;
@@ -382,7 +382,7 @@ main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
     }
     main .nosotros-seccion2 .nosotros-seccion2__imgprov {
         flex-direction: row;
-        padding: 10px;
+        justify-content: space-around;
     }
     main .nosotros-seccion2 .nosotros-seccion2__imgprov .vacalin img {
         width: 200px;
@@ -393,7 +393,7 @@ main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
         height: 200px; 
     }
     main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
-        width: 300px;
+        width: 350px;
         height: 200px;
     }
 }
