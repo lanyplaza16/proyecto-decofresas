@@ -19,55 +19,51 @@ body {
 
 /* comienzo de estilos generales de header */
 /* mobile first */
-header {
-    width: 100%;
-    display: flex; /* propiedad flex */
-    flex-flow: column; /* cajas en columna */
-    position: fixed; /* fija menu */
-    top: 0; /* fija menu arriba */
-}
-header #top {
-    padding: 0.5rem;
-    background-color: #FFDDEE; /* fondo de header */
-    display: flex; /* propiedad flex */
-    justify-content: space-between; /* espacio entre el logo y el menu */
-    align-items: center; /* alineación vertical de logo y menu */
-}
-header #top .top__logo {
-    display: flex; /* propiedad flex */
-    align-items: center; /* imagen y titulo centrado verticalmente*/
-}
-header #top .top__logo a{
-    text-decoration: none; /* saca decoracion de link */
-}
-header #top .top__logo a .logo__img-principal {
-    height: 2rem; /* alto de imagen principal */
-    width: 2rem; /* ancho de imagen principal */
-}
-header #top .top__logo a .logo__titulo {
+.navbar-brand {
     font-family: 'Pacifico', cursive; /* fuente del titulo*/
-    font-size: 1rem; /* tamaño del titulo */
+    font-size: 32px; /* tamaño del titulo */
     color: #78BF45; /* color del titulo */
 }
-header #top .top__menu .menu__lista {
-    display: flex; /* propiedad flex */
-    flex-flow: row wrap; /* en una fila y doble si es necesario */
-    gap: 0.2rem; /* espacio entre palabras */
-    list-style: none; /* quita vinetas del menu */
+.nav-link {
     text-transform: uppercase;/* menu en mayuscula */
+    color: #005801; /* color letras del menu */
     font-size: 16px; /* tamaño de fuente del menu */
 }
-header #top .top__menu .menu__lista li a {
-    text-decoration: none; /* sin cambio de color en el link */
-    color: #005801; /* color letras del menu */
+/* mq para laptop */
+@media screen and (min-width:1024px) {
+    .navbar-brand:hover {
+        color: #78BF45;
+    }
+    .d-inline-block.align-text-top:hover {
+        transform: rotate(40deg);
+    }
+    .d-inline-block.align-text-top {
+        transition: all .3s;
+    }
+    .nav-item:hover {
+        transform: scale(1.2);
+    }
+    .nav-item {
+        transition: all .3s;
+    }
+} 
+/*  fin de estilos generales de header */
+
+/* comienzo de estilos generales de main */
+/*mobile first */
+main {
+    display: flex; /* propiedad flex */
+    flex-flow: column wrap; /* cajas en columnas y doble linea */
+    justify-content: center; /* cajas centradas arriba */
+    margin-top: 80px; /* inicio del main para que no lo tape el header */
+    width: 100%; /* ancho del mail */
 }
-header .mensaje-container {
+.mensaje-container {
     overflow: hidden; /* oculta los elementos que se salen del contenedor */
-    width: 100%; /* ancho del contenedor */
     background-color: white; /* fondo de mensaje */
     border-bottom: solid 2px #FFDDEE; /* linea de borde del mensaje */
 }
-header .mensaje {
+.mensaje {
     color: #005801; /*color de letras de la cinta de mensaje */
     font-size: 16px; /* tamaño de fuente de la cinta de mensaje */
     text-align: right; /* alineacion del texto */
@@ -84,99 +80,32 @@ header .mensaje {
 }
 /* mq para tablet */
 @media screen and (min-width:600px) {
-    header #top .top__logo a .logo__img-principal {
-        width: 3rem;
-        height: 3rem;
-    }
-    header #top .top__logo a .logo__titulo {
-        font-size: 32px;
-    }
-    header #top .top__menu .menu__lista {
-        font-size: 32px;
-        gap: 1rem;
-    }
-    header .mensaje {
-        animation: cinta-mensaje 15s linear infinite; /* animación de 20 segundos, lineal y un número infinito de repeticiones */
+    .mensaje {
+        animation: cinta-mensaje 16s linear infinite; /* animación de 16 segundos, lineal y un número infinito de repeticiones */
     }
 }
 /* mq para laptop */
 @media screen and (min-width:1024px) {
-    header #top .top__logo a .logo__img-principal {
-        width: 4rem;
-        height: 4rem;
-        transition: .3s;
-    }
-    header #top .top__logo a .logo__img-principal:hover {
-        width: 4rem;
-        height: 4rem;
-        transform: rotate(30deg);
-        transition: .3s;
-    }
-    header #top .top__logo a .logo__titulo {
-        font-size: 32px;
-        transition: .3s;
-    }
-    header #top .top__logo a .logo__titulo:hover {
-        transform: scale(1.1);
-        transition: .3s;
-    }
-    header #top .top__menu .menu__lista {
-        font-size: 16px;
-        gap: 2rem;
-    }
-    header #top .top__menu .menu__lista li {
-        transition: .3s;
-    }
-    header #top .top__menu .menu__lista li:hover {
-        transform: scale(1.2);
-        transition: .3s;
-    }
-    header .mensaje {
-        animation: cinta-mensaje 20s linear infinite; /* animación de 20 segundos, lineal y un número infinito de repeticiones */
-    }
-} 
-/*  fin de estilos generales de header */
-
-/* comienzo de estilos generales de main */
-/*mobile first */
-main {
-    display: flex; /* propiedad flex */
-    flex-flow: column wrap; /* cajas en columnas y doble linea */
-    justify-content: center; /* cajas centradas arriba */
-    margin-top: 100px; /* inicio del main para que no lo tape el header */
-    width: 100%; /* ancho del main */
-}
-main #arriba {
-    font-size: 16px; /* tamaño de letra */
-    text-transform: uppercase; /* cambio a mayuscula */
-    color: rgb(180, 180, 180); /* color de letra */
-}
-/* mq para tablet */
-@media screen and (min-width:600px) {
-    main {
-        margin-top: 130px; /* inicio del main para que no lo tape el header */
-    }
-}
-/* mq para laptop */
-@media screen and (min-width:1024px) {
-    main {
-        margin-top: 110px; /* inicio del main para que no lo tape el header */
+    .mensaje {
+        font-size: 20px; /* tamaño de fuente de la cinta de mensaje */
+        animation: cinta-mensaje 24s linear infinite; /* animación de 24 segundos, lineal y un número infinito de repeticiones */
     }
 } 
 /* fin de estilos generales de main */
 
 /* comienzo de estilos generales de footer */
 /* mobile firts */
-footer .whatsapp {
+.whatsapp {
     position: fixed; /* fija boton de ws */
-     bottom: 5%; /* fija botom de ws abajo */
-     right: 1%; /* fija botom de ws a la derecha */
+    bottom: 100px; /* fija botom de ws abajo */
+    right: 20px; /* fija botom de ws a la derecha */
+    z-index: 9999; /* deja el botom al frente */
  }
- footer .whatsapp a img {
-     width: 2rem; /*ancho boton de ws */
-     height: 2rem; /*alto boton de ws */
+ .whatsapp img {
+    width: 2rem; /*ancho boton de ws */
+    height: 2rem; /*alto boton de ws */
  }
-footer #abajo {
+#abajo {
     margin-top: 0,6rem;
     background-color: rgba(211, 204, 204, 0); /* fondo de footer */
     display: flex; /* elementos alineados */
@@ -184,40 +113,40 @@ footer #abajo {
     align-items: center; /* alineación vertical */
     padding: 1rem; /* padding del footer */
 }
-footer #abajo .abajo__mensaje{
+#abajo .abajo__mensaje{
     text-align: left; /* alienacion del mensaje del footer */
     font-size: 0.8rem; /* tamaño del mensaje del footer */
     margin-left: 0.2rem; /* margen del mensaje del footer */
 }
-footer #abajo .abajo__logoIG {
+#abajo .abajo__logoIG {
     height: 3rem; /* alto del logo de ig */
     width: 3rem; /* ancho del logo de ig */
     padding: 0.2rem;
     margin-left: 0.5rem; /* margin del logo de ig */
 }
-footer #abajo .abajo__logoFB{
+#abajo .abajo__logoFB{
     height: 45px; /* alto del logo de fb */
     width: 45px; /* ancho del logo de fb */
     margin-left: 30px; /* margin del logo de fb */
 }
-footer .volver-arriba {
+.volver-arriba {
     text-decoration: none; /* sacar el subrayado */
     text-align: right; /* alineado a la derecha */
 }
 /* mq para tablet */
 @media screen and (min-width:600px) {
-    footer .whatsapp a img {
+    .whatsapp img {
         width: 3rem; /*ancho boton de ws */
         height: 3rem; /*alto boton de ws */
     }
-    footer #abajo .abajo__mensaje{
+    #abajo .abajo__mensaje{
         font-size: 1rem; /* tamaño del mensaje del footer */
         margin-left: 1rem; /* margen del mensaje del footer */
     }
 }
 /* mq para laptop */
 @media screen and (min-width:1024px) {
-    footer .whatsapp a img {
+    .whatsapp img {
         width: 4rem; /*ancho boton de ws */
         height: 4rem; /*alto boton de ws */
     }
@@ -241,45 +170,38 @@ footer .volver-arriba {
 
 /* comienzo de estilos de home*/
 /* mobile firts*/
-main .home-seccion1 img{
-    width: 100%; /* ancho de imagen seccion 1 */
-    height: 40vh;
+.d-block.w-100 {
+    height: 50vh; /* alto de las fotos del carrusel */
 }
-main .home-seccion2 {
+.seccion-dos {
     display: flex; /* propiedad flex */
     white-space: nowrap;
     align-items: center; /* alineación vertical */
     justify-content: center; /* alienación horizontal */
-    gap: 5px;
-    width: 100%; /* ancho de la seccion con respecto al tamaño de la pantalla */
+    gap: 10px;
     height: 20vh; /* alto de la seccion con respecto al tamaño de la pantalla */
     background-color: #EC4E6F; /* fondo de footer */
-    padding: 5px; /* padding del footer */
 }
-main .home-seccion2 p {
+.seccion-dos p {
     font-size: 16px; /* tamaño letra */
 }
-main .home-seccion2 img {
+.seccion-dos img {
     width: 15%; /* ancho de imagen */
-    height: 30%; /* alto de imagen */
+    height: 40%; /* alto de imagen */
 }
 /* mq para tablet */
 @media screen and (min-width:600px) {
-    main .home-seccion1 img{
-        height: 70vh;
-    }
-    main .home-seccion2 img {
-        width: 15%; /* ancho de imagen */
+    .seccion-dos img {
+        width: 20%; /* ancho de imagen */
         height: 80%; /* alto de imagen */
+    }.seccion-dos img p {
+        font-size: 22px;
     }
 }
 /* mq para laptop */
 @media screen and (min-width:1024px) {
-    main .home-seccion1 img{
-        height: 80vh;
-    }
-    main .home-seccion2 img {
-        width: 15%; /* ancho de imagen */
+    .seccion-dos img {
+        width: 20%; /* ancho de imagen */
         height: 100%; /* alto de imagen */
     }
 }
