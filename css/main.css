@@ -348,22 +348,6 @@ main .galeria div img {
     height: 100%;
     object-fit: cover;
 }
-.galeria__img-dos, .galeria__img-cinco {
-    display: none;
-}
-
-main .galeria-seccion1 .galeria-seccion1__galeria .galeria__titulo {
-    grid-column: span 3; /* combia columnas toma 3 espacios */
-    margin-top: 10px; /* margin entre productos */
-    font-family: 'Pacifico', cursive; /* fuente del titulo */
-    font-size: 30px; /* tamaño del titulo */
-    color: #005801; /* color del titulo */ 
-}
-main .galeria-seccion1 .galeria-seccion1__galeria .galeria__imagen img {
-    width: 100%; /*imagen que ocupe el 100% del div */
-    height: 100%;
-    object-fit: cover; /* tamaño de imagen dentro del contenedor */
-}
 /* fin de estilos de galeria */
 
 /* comienzo de estilos de contacto */
