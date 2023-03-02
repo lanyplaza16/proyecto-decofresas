@@ -388,4 +388,8 @@ main .galeria-seccion1 .galeria-seccion1__galeria .galeria__imagen img {
     color: white; /* color de letra */
     box-shadow: 0 0 15px black; /* sombra */
 }
+.container.text-center.segundo {
+    background-color: #e0e0e0;
+    padding: 10px;
+}
 /* fin de estilos de contacto */
