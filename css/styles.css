@@ -1,4 +1,18 @@
 @charset "UTF-8";
+/*paleta de colores*/
+/* tamaño de pantalla*/
+/*fuente*/
+/* tamaño de fuente*/
+/*mixin*/
+/*extend*/
+.botones, .col a .botom-instagram, .col a .botom-contacto {
+  font-size: 30px; /* tamaño de letra */
+  padding: 10px; /* margen interior */
+  color: white; /* color de letra */
+  box-shadow: 0 0 15px black; /* sombra */
+  margin-top: 20px;
+}
+
 /* reset */
 * {
   margin: 0;
@@ -90,7 +104,7 @@ main .titulos h1 {
   text-align: center;
 }
 
-main h3 {
+main h2 {
   font-family: "Pacifico", cursive; /* fuente del titulo*/
   font-size: 24px; /* tamaño del titulo */
   color: #78BF45; /* color del titulo */
@@ -106,6 +120,9 @@ main h3 {
   main .titulos h1 {
     font-size: 32px; /* tamaño del titulo */
   }
+  main h2 {
+    font-size: 32px; /* tamaño del titulo */
+  }
 }
 /* mq para laptop */
 @media screen and (min-width: 1024px) {
@@ -114,6 +131,9 @@ main h3 {
     animation: cinta-mensaje 24s linear infinite; /* animación de 24 segundos, lineal y un número infinito de repeticiones */
   }
   main .titulos h1 {
+    font-size: 32px; /* tamaño del titulo */
+  }
+  main h2 {
     font-size: 32px; /* tamaño del titulo */
   }
 }
@@ -246,7 +266,7 @@ main .nosotros-seccion1 {
 
 main .nosotros-seccion1 .nosotros-seccion1__nosotros {
   width: 100%;
-  display: flex; /* propiedad flex */
+  display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center; /* alineacion de texto centrada */
@@ -259,7 +279,7 @@ main .nosotros-seccion1 .nosotros-seccion1__nosotros p {
 main .nosotros-seccion2 {
   background-color: #FFDDEE; /* color de fonde de la seccion */
   width: 100%;
-  display: flex; /* propiedad flex */
+  display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center; /* alineacion de texto centrada */
@@ -317,11 +337,11 @@ main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
   main .nosotros-seccion1 {
     padding: 50px; /* padding de la seccion*/
   }
-  main .nosotros-seccion1 .nosotros-seccion1__nosotros h3 {
-    font-size: 50px; /* tamaño del titulo */
+  main .nosotros-seccion1 .nosotros-seccion1__nosotros h2 {
+    font-size: 32px; /* tamaño del titulo */
   }
-  main .nosotros-seccion2 h3 {
-    font-size: 50px; /* tamaño del titulo */
+  main .nosotros-seccion2 h2 {
+    font-size: 32px; /* tamaño del titulo */
   }
   main .nosotros-seccion2 .nosotros-seccion2__imgprov {
     flex-direction: row;
@@ -380,7 +400,7 @@ main .galeria div img {
 
 .container.text-center h2 {
   font-family: "Pacifico", cursive; /* fuente del titulo*/
-  font-size: 30px; /* tamaño del titulo */
+  font-size: 24px; /* tamaño del titulo */
   color: #005801; /* color del titulo */
   margin-bottom: 10px; /* margen inferior */
 }
@@ -390,11 +410,11 @@ main .galeria div img {
 }
 
 .col a .botom-contacto {
-  font-size: 30px; /* tamaño de letra */
   background-color: #005801; /* fondo de botom */
-  padding: 10px; /* margen interior */
-  color: white; /* color de letra */
-  box-shadow: 0 0 15px black; /* sombra */
+}
+
+.col a .botom-instagram {
+  background-color: #EC4E6F; /* fondo de botom */
 }
 
 .container.text-center.segundo {
@@ -404,4 +424,4 @@ main .galeria div img {
 
 /* fin de estilos de contacto */
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=styles.css.map */

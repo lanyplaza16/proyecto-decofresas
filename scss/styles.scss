@@ -1,3 +1,4 @@
+@import "variables";
 /* reset */
 *{
     margin: 0;
@@ -11,7 +12,7 @@
 /*mobile first */
 body {
     background-image: linear-gradient(to top, rgb(230, 221, 221), white); /* fondo de todas las paginas gradiente lineal*/
-    font-family: 'Montserrat', sans-serif; /* fuente general */
+    font-family: $fuente-texto; /* fuente general */
     display: flex; /* propiedad flex */
     flex-flow: column wrap; /* todas las cajas en columna */
 }
@@ -20,19 +21,19 @@ body {
 /* comienzo de estilos generales de header */
 /* mobile first */
 .navbar-brand {
-    font-family: 'Pacifico', cursive; /* fuente del titulo*/
-    font-size: 32px; /* tamaño del titulo */
-    color: #78BF45; /* color del titulo */
+    font-family: $fuente-titulos; /* fuente del titulo*/
+    font-size: $size-prin; /* tamaño del titulo */
+    color: $verde-manzana; /* color del titulo */
 }
 .nav-link {
     text-transform: uppercase;/* menu en mayuscula */
-    color: #005801; /* color letras del menu */
-    font-size: 16px; /* tamaño de fuente del menu */
+    color: $verde-oscuro; /* color letras del menu */
+    font-size: $size-menu; /* tamaño de fuente del menu */
 }
 /* mq para laptop */
-@media screen and (min-width:1024px) {
+@media screen and (min-width:$pc) {
     .navbar-brand:hover {
-        color: #78BF45;
+        color: $verde-manzana;
     }
     .d-inline-block.align-text-top:hover {
         transform: rotate(40deg);
@@ -60,11 +61,11 @@ main {
 }
 .mensaje-container {
     overflow: hidden; /* oculta los elementos que se salen del contenedor */
-    background-color: white; /* fondo de mensaje */
-    border-bottom: solid 2px #FFDDEE; /* linea de borde del mensaje */
+    background-color: $blanco; /* fondo de mensaje */
+    border-bottom: solid 2px $rosa-claro; /* linea de borde del mensaje */
 }
 .mensaje {
-    color: #005801; /*color de letras de la cinta de mensaje */
+    color: $verde-oscuro; /*color de letras de la cinta de mensaje */
     font-size: 16px; /* tamaño de fuente de la cinta de mensaje */
     text-align: right; /* alineacion del texto */
     white-space: nowrap;
@@ -79,36 +80,42 @@ main {
     }
 }
 main .titulos h1 {
-    font-family: 'Pacifico', cursive; /* fuente del titulo*/
-    font-size: 24px; /* tamaño del titulo */
-    color: #78BF45; /* color del titulo */
+    font-family: $fuente-titulos; /* fuente del titulo*/
+    font-size: $h1-mobile; /* tamaño del titulo */
+    color: $verde-manzana; /* color del titulo */
     margin: 10px;
     text-align: center;
 }
-main h3 {
-    font-family: 'Pacifico', cursive; /* fuente del titulo*/
-    font-size: 24px; /* tamaño del titulo */
-    color: #78BF45; /* color del titulo */
+main h2 {
+    font-family: $fuente-titulos; /* fuente del titulo*/
+    font-size: $h2-mobile; /* tamaño del titulo */
+    color: $verde-manzana; /* color del titulo */
     margin: 10px;
     text-align: center;
 }
 /* mq para tablet */
-@media screen and (min-width:600px) {
+@media screen and (min-width:$tablet) {
     .mensaje {
         animation: cinta-mensaje 16s linear infinite; /* animación de 16 segundos, lineal y un número infinito de repeticiones */
     }
     main .titulos h1 {
-        font-size: 32px; /* tamaño del titulo */
+        font-size: $h1-tablet; /* tamaño del titulo */
+    }
+    main h2 {
+        font-size: $h2-tablet; /* tamaño del titulo */
     }
 }
 /* mq para laptop */
-@media screen and (min-width:1024px) {
+@media screen and (min-width:$pc) {
     .mensaje {
         font-size: 20px; /* tamaño de fuente de la cinta de mensaje */
         animation: cinta-mensaje 24s linear infinite; /* animación de 24 segundos, lineal y un número infinito de repeticiones */
     }
     main .titulos h1 {
-        font-size: 32px; /* tamaño del titulo */
+        font-size: $h1-pc; /* tamaño del titulo */
+    }
+    main h2 {
+        font-size: $h2-pc; /* tamaño del titulo */
     }
 } 
 /* fin de estilos generales de main */
@@ -145,7 +152,7 @@ footer .container {
     display: block;
     padding: 5px;
     text-decoration: none;
-    color: #005801;
+    color: $verde-oscuro;
 }  
 .logoFB {
     width: 45px;
@@ -157,7 +164,7 @@ footer .container {
     padding: 2px;
 }
 /* mq para laptop */
-@media screen and (min-width:1024px) {
+@media screen and (min-width:$pc) {
     .container {
         font-size: 24px;
     }
@@ -187,8 +194,8 @@ footer .container {
         transition: all .3s;
     }
     .menu-footer li a:hover {
-        background-color: #EC4E6F;
-        color: #005801; 
+        background-color: $rosa-fucsia;
+        color: $verde-oscuro; 
     } 
 }
 /* fin de estilos generales de footer */
@@ -201,19 +208,19 @@ footer .container {
     align-items: center; /* alineación vertical */
     justify-content: center; /* alienación horizontal */
     height: 20vh; /* alto de la seccion con respecto al tamaño de la pantalla */
-    background-color: #EC4E6F; /* fondo de footer */
+    background-color: $rosa-fucsia; /* fondo de footer */
 }
 .seccion-dos p {
     font-size: 16px; /* tamaño letra */
 }
 /* mq para tablet */
-@media screen and (min-width:600px) {
+@media screen and (min-width:$tablet) {
     .seccion-dos p {
         font-size: 22px;
     }
 }
 /* mq para laptop */
-@media screen and (min-width:1024px) {
+@media screen and (min-width:$pc) {
     .seccion-dos p {
         font-size: 26px;
     }
@@ -229,24 +236,19 @@ main .nosotros-seccion1 {
     flex-direction: column; 
     justify-content: center;
     gap: 20px; /* espacio entre elementos */
-    
 }
 main .nosotros-seccion1 .nosotros-seccion1__nosotros {
     width: 100%;
-    display: flex; /* propiedad flex */
-    justify-content: center;
-    flex-direction: column;
+    @include flex-center-column;
     text-align: center; /* alineacion de texto centrada */
 }
 main .nosotros-seccion1 .nosotros-seccion1__nosotros p {
     font-size: 16px;
 }
 main .nosotros-seccion2 {
-    background-color: #FFDDEE; /* color de fonde de la seccion */
+    background-color: $rosa-claro; /* color de fonde de la seccion */
     width: 100%;
-    display: flex; /* propiedad flex */
-    justify-content: center;
-    flex-direction: column;
+    @include flex-center-column;
     text-align: center; /* alineacion de texto centrada */
 }
 main .nosotros-seccion2 .nosotros-seccion2__imgprov {
@@ -269,7 +271,7 @@ main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
     height: 80%;
 }
 /* mq para tablet */
-@media screen and (min-width:600px) {
+@media screen and (min-width:$tablet) {
     main .nosotros-seccion1 {
         padding: 40px; /* padding de la seccion*/
         flex-direction: row;
@@ -293,15 +295,15 @@ main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
     }
 }
 /* mq para laptop */
-@media screen and (min-width:1024px) {
+@media screen and (min-width:$pc) {
     main .nosotros-seccion1 {
         padding: 50px; /* padding de la seccion*/ 
     }
-    main .nosotros-seccion1 .nosotros-seccion1__nosotros h3 {
-        font-size: 50px; /* tamaño del titulo */
+    main .nosotros-seccion1 .nosotros-seccion1__nosotros h2 {
+        font-size: $h2-pc; /* tamaño del titulo */
     }
-    main .nosotros-seccion2 h3 {
-        font-size: 50px; /* tamaño del titulo */
+    main .nosotros-seccion2 h2 {
+        font-size: $h2-pc; /* tamaño del titulo */
     }
     main .nosotros-seccion2 .nosotros-seccion2__imgprov {
         flex-direction: row;
@@ -325,7 +327,7 @@ main .nosotros-seccion2 .nosotros-seccion2__imgprov .mercado img {
 /* comienzo de estilos de productos */
 /* mobile firts*/
 div.col-sm-4 {
-    background-color: #FFDDEE;
+    background-color: $rosa-claro;
 }
 .producto-item {
     width: 100%
@@ -357,20 +359,21 @@ main .galeria div img {
     padding: 10px;
 }
 .container.text-center h2 {
-    font-family: 'Pacifico', cursive; /* fuente del titulo*/
-    font-size: 30px; /* tamaño del titulo */
-    color: #005801; /* color del titulo */
+    font-family: $fuente-titulos; /* fuente del titulo*/
+    font-size: $h1-mobile; /* tamaño del titulo */
+    color: $verde-oscuro; /* color del titulo */
     margin-bottom: 10px; /* margen inferior */
 }
 .col a {
     text-decoration: none; /* sacar decoracion del link */
 }
 .col a .botom-contacto{
-    font-size: 30px; /* tamaño de letra */
-    background-color: #005801; /* fondo de botom */
-    padding: 10px; /* margen interior */
-    color: white; /* color de letra */
-    box-shadow: 0 0 15px black; /* sombra */
+    @extend .botones;
+    background-color: $verde-oscuro; /* fondo de botom */
+}
+.col a .botom-instagram{
+    @extend .botones;
+    background-color: $rosa-fucsia; /* fondo de botom */
 }
 .container.text-center.segundo {
     background-color: #e0e0e0;
