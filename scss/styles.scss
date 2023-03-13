@@ -33,7 +33,7 @@ body {
 /* mq para laptop */
 @media screen and (min-width:$pc) {
     .navbar-brand:hover {
-        color: $verde-manzana;
+        color: $verde-manzana; /* color */
     }
     .d-inline-block.align-text-top:hover {
         transform: rotate(40deg);
